@@ -22,13 +22,13 @@ Python (3.5.2)
 sudo apt-get install python3
 ```
 
-Twython (3.6.0) - https://twython.readthedocs.io/en/latest/index.html
+Twython (3.6.0)
 
 ```
 pip3 install twython
 ```
 
-search_google (1.2.0) - https://rrwen.github.io/search_google/
+search_google (1.2.0)
 
 ```
 pip3 install search_google
@@ -44,30 +44,6 @@ Execute using Python 3:
 ```
 python3 img_reply_bot.1.0.0.py
 ```
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
