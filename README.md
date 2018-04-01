@@ -1,6 +1,6 @@
-# Project Title
+# Image Reply Bot
 
-One Paragraph of project description goes here
+This script obtains user mentions via Twython (3.6.0), a Python wrapper for the Twitter API and replies with 4 query-based png images obtained through the search_google (1.2.0) a module for Google API image search.
 
 ## Getting Started
 
@@ -68,21 +68,15 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+1.0.0 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* **David J. Ortiz Rivera** - *Initial work* - [kytrnd](https://github.com/kytrnd)
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
+* 
 * Inspiration
 * etc
 
