@@ -34,23 +34,16 @@ search_google (1.2.0) - https://rrwen.github.io/search_google/
 pip3 install search_google
 ```
 
-### Installing
+## Running the script
 
-A step by step series of examples that tell you have to get a development env running
+After completing the previous steps, move the img_reply_bot.1.0.0.py file to your directory.
+Change some variables like directories and developer keys.
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+Execute using Python 3:
 
 ```
-until finished
+python3 img_reply_bot.1.0.0.py
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
@@ -78,17 +71,13 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+* [Python](https://docs.python.org/3/) - Programming language
+* [Twython](https://twython.readthedocs.io/en/latest/index.html) - Python wrapper for Twitter API
+* [search_google](https://rrwen.github.io/search_google/) - Python module for Google Custom Search API
 
 ## Versioning
 
-1.0.0 
+I reffered to [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 
@@ -96,8 +85,8 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Acknowledgments
 
-* 
-* Inspiration
-* etc
+* Family and friends for testing
 
+## Contact Info:
 
+* e-mail: david.ortiz11@upr.edu
