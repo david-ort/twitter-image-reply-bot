@@ -21,7 +21,7 @@ oauth_token_secret = 'your_oauth_token_secret'
 developerKey = 'your_developerKey'
 cx = 'your_cx'
 
-#  Logging setup
+#  Logger setup
 
 logging.basicConfig(level=logging.INFO,format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',datefmt='%d-%m-%y %H:%M:%S',filename='./bot.log',filemode='w')
 console = logging.StreamHandler()
