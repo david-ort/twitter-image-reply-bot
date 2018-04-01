@@ -1,24 +1,25 @@
-#! usr/bin/env/python3
+#!usr/bin/env/ python3
 
-import os,time,json,logging,string,random,glob,search_google.api,shutil,requests
+#  Author       : David J. Ortiz Rivera / kytrnd / STILLinBL00M
+#  Project      : Twitter Image Reply BOT (https://github.com/kytrnd/Image-Reply-Bot)
+#  Version      : 1.0.0
+#  File         : img_reply_bot.py
+#  Type         : Public
+#  Description  : Source code for twitter bot.
+
+import json,string,random,glob,search_google.api,shutil,requests
 from twython import Twython,TwythonStreamer
 from time import gmtime,strftime
 from os import makedirs,path
 from auth import *
 
-username = 'imgReplyBOT'
-logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
-                    datefmt='%d-%m-%y %H:%M:%S',filename='./log.txt',filemode='w')
-console = logging.StreamHandler()
-console.setLevel(logging.INFO)
-formatter = logging.Formatter('%(name)-12s: %(levelname)-8s %(message)s')
-console.setFormatter(formatter)
-logging.getLogger('').addHandler(console)
-streamer = logging.getLogger('Streamer')
-twitter = Twython(APP_KEY,APP_SECRET,OAUTH_TOKEN,OAUTH_TOKEN_SECRET)
+# id_generator(size,chars) : Creates an id to help differentiate images.
+#                          : The id consists of uppercase ascii caracters and digits.
 
-def id_generator(size=4, chars=string.ascii_uppercase + string.digits):
+def id_generator(size=8, chars=string.ascii_uppercase + string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
+
+# img_search(query): Downloads 4 query-based png images to dir_path.
 
 def img_search(query):
 
@@ -37,14 +38,15 @@ def img_search(query):
     }
 
     results = search_google.api.results(buildargs, cseargs)
-    
-    dir_path = '/home/ky/projects/Bots/imgBot/images'
     links = results.links
-    key = strftime("_%d-%m-%Y_%H-%M-%S-", gmtime()) + id_generator()
+    key = id_generator()
     
+    # Images will be saved in this path.
+    dir_path = '/home/ky/projects/Bots/imgBot/images'    
     if not path.exists(dir_path):
         makedirs(dir_path)
-    
+
+    # Name and save each image. 
     for i, url in enumerate(links):
         if 'start' in results.cseargs:
             i += int(results.cseargs['start'])
@@ -59,40 +61,48 @@ def img_search(query):
 
     return key
 
-# Streamer CLASS : IF username IS DETECTED IN THE STREAM, RESPOND WITH 4 IMAGES.
-# (RESPONSE DEPENDS ON TWEET AUTHOR QUERY)
-# IF SOME ERROR OCCURS, PRINT STATUS CODE AND DISCONNECT THE STREAM.
+# Streamer Class : 
+#   on_success(self,data)           : If @username is detected in stream, log and respond with 4 png images.
+#   on_error(self,status_code,data) : If some error occurs, log it, print status code, and disconnect the stream.
 
 class Streamer(TwythonStreamer):
 
-    def on_success(self, data):
-        if(data['user']['screen_name'] != username):
-            streamer.info('(ATTEMPT) ' + data['text'] + ' ' + data['user']['screen_name'])
-            query = data['text'].split(' ',1)[1]
-            reply = '@'+data['user']['screen_name'] + ' ' + query
+    def on_success(self,data):
+        if(data['user']['screen_name'] != username): # Validates input and prevents a reply to itself
+            streamer.info('Attempt (User: ' + data['user']['screen_name'] + 'Query: ' + data['text'] + ')')
+            twitter = Twython(app_key,app_secret,oauth_token,oauth_token_secret)
+            query = data['text'].split()
+            tmp = ''
+            for i in query:
+                if '@' not in i:
+                    tmp += i + ' '
+            tmp = tmp[:-1]
+            
+            reply = '@'+data['user']['screen_name'] + ' ' + tmp
+            key = img_search(tmp)
 
-            key = img_search(query)
+            # Paths for images to be posted.
             files = glob.glob('/home/ky/projects/Bots/imgBot/images/*' + key + '.png')
             ids = []
+            
+            # Upload images onto twitter.
             for i in files:
                 photo = open(i, 'rb')
                 response = twitter.upload_media(media=photo)
                 ids.append(response['media_id'])
             twitter.update_status(status=reply,in_reply_to_status_id=data['id_str'],media_ids=ids)
-            streamer.info('(POSTED) ' + data['text'] + data['user']['screen_name'])
+            streamer.info('Success (User: ' + data['user']['screen_name'] + 'Query: ' + data['text'] + ')')
 
-
-    def on_error(self, status_code, data):
-        streamer.error(status_code + data['text'] + data['user']['screen_name'])
+    def on_error(self,status_code,data):
+        streamer.error(status_code)
         self.disconnect()
 
-# main() : STARTS OFF THE TWITTER STREAM (TRACKING BY USERNAME).
+# main() : Starts off the twitter stream (tracking by username).
 
 def main():
-
-    stream = Streamer(APP_KEY,APP_SECRET,OAUTH_TOKEN,OAUTH_TOKEN_SECRET)
+    streamer.info('Streamer started')
+    stream = Streamer(app_key,app_secret,oauth_token,oauth_token_secret)
     stream.statuses.filter(track=username)
-
     return 0
 
 main()
