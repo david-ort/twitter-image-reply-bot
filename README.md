@@ -4,34 +4,24 @@ This script obtains user mentions via Twython, a Python wrapper for the Twitter 
 
 ## Getting Started
 
-1. Create a Twitter account if you don't already have one.
+1. [Create a Twitter account](https://www.google.com.pr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=13&cad=rja&uact=8&ved=0ahUKEwiTtKCX-afaAhUMq1kKHbdJCfIQFghhMAw&url=https%3A%2F%2Ftwitter.com%2Fsignup%3Flang%3Den&usg=AOvVaw1MfJ_wTmLtjRlnLzZ8bNkM)
 2. [Create a Twitter application](http://docs.inboundnow.com/guide/create-twitter-application/)
 3. [Create your Custom Search Engine with Google](https://developers.google.com/custom-search/docs/tutorial/creatingcse)
-4. Create a directory in your system
+4. Create a directory in your system and move to it
 5. Download the raw files using ```wget```:
 ```
 wget https://raw.githubusercontent.com/kytrnd/twitter-image-reply-bot/master/image-reply-bot/img_reply_bot.py
 wget https://raw.githubusercontent.com/kytrnd/twitter-image-reply-bot/master/image-reply-bot/setup.py
 ```
-
-### Prerequisites
-
-Once in your project folder in your terminal install the following:
-
-Python 3
-
+6. Install Python3:
 ```
 sudo apt-get install python3
 ```
-
-Twython
+7. Install Twython and search_google using ```pip3```:
 
 ```
 pip3 install twython
 ```
-
-search_google
-
 ```
 pip3 install search_google
 ```
