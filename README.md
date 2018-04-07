@@ -51,11 +51,5 @@ python3 img_reply_bot.1.0.0.py
 * [Twython](https://twython.readthedocs.io/en/latest/index.html) - Python wrapper for Twitter API
 * [search_google](https://rrwen.github.io/search_google/) - Python module for Google Custom Search API
 
-## Versioning
-
-I reffered to [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
-
-## Authors
-* **David J. Ortiz Rivera** - *Initial work* - [kytrnd](https://github.com/kytrnd)
-## Contact Info
+### Contact Info
 david.ortiz11@upr.edu
