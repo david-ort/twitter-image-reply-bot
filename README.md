@@ -16,19 +16,19 @@ This script obtains user mentions via Twython (3.6.0), a Python wrapper for the 
 
 Once in your project folder in your terminal install the following:
 
-Python (3.5.2)
+Python 3
 
 ```
 sudo apt-get install python3
 ```
 
-Twython (3.6.0)
+Twython
 
 ```
 pip3 install twython
 ```
 
-search_google (1.2.0)
+search_google
 
 ```
 pip3 install search_google
@@ -36,20 +36,19 @@ pip3 install search_google
 
 ## Running the script
 
-After completing the previous steps, move the img_reply_bot.1.0.0.py file to your directory.
+After completing the previous steps, move the img_reply_bot.py file to your directory.
 Change some variables like directories and developer keys.
 
 Execute using Python 3:
 
 ```
-python3 img_reply_bot.1.0.0.py
+python3 img_reply_bot.py
 ```
 
 ## Built With
-
-* [Python](https://docs.python.org/3/) - Programming language
-* [Twython](https://twython.readthedocs.io/en/latest/index.html) - Python wrapper for Twitter API
-* [search_google](https://rrwen.github.io/search_google/) - Python module for Google Custom Search API
+* [Python 3.5.2](https://docs.python.org/3/) - Programming language
+* [Twython 3.6.0](https://twython.readthedocs.io/en/latest/index.html) - Python wrapper for Twitter API
+* [search_google 1.2.0](https://rrwen.github.io/search_google/) - Python module for Google Custom Search API
 
 ### Contact Info
 * david.ortiz11@upr.edu
