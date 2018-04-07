@@ -1,4 +1,4 @@
-# Image Reply Bot
+# Twitter Image Reply Bot
 
 This script obtains user mentions via Twython (3.6.0), a Python wrapper for the Twitter API and replies with 4 query-based png images obtained through the search_google (1.2.0) a module for Google API image search.
 
@@ -46,9 +46,9 @@ python3 img_reply_bot.py
 ```
 
 ## Built With
-* [Python 3.5.2](https://docs.python.org/3/) - Programming language
-* [Twython 3.6.0](https://twython.readthedocs.io/en/latest/index.html) - Python wrapper for Twitter API
-* [search_google 1.2.0](https://rrwen.github.io/search_google/) - Python module for Google Custom Search API
+* [Python (3.5.2)](https://docs.python.org/3/) - Programming language
+* [Twython (3.6.0)](https://twython.readthedocs.io/en/latest/index.html) - Python wrapper for Twitter API
+* [search_google (1.2.0)](https://rrwen.github.io/search_google/) - Python module for Google Custom Search API
 
 ### Contact Info
 * david.ortiz11@upr.edu
