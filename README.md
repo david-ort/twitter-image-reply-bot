@@ -5,11 +5,14 @@ This script obtains user mentions via Twython, a Python wrapper for the Twitter 
 ## Getting Started
 
 1. Create a Twitter account if you don't already have one.
-  1.a. You can use your own personal account, but I believe it's best to use one solely for this project.
-2. Create a Twitter application
-  2.a. For more info visit: https://dototot.com/how-to-write-a-twitter-bot-with-python-and-tweepy/
+2. [Create a Twitter application](http://docs.inboundnow.com/guide/create-twitter-application/)
 3. [Create your Custom Search Engine with Google](https://developers.google.com/custom-search/docs/tutorial/creatingcse)
-4. This project was developed using Ubuntu for Windows 10, I assume it can be easily recreated for Unix distros and OSX with minor tweaking.
+4. Create a directory
+5. Download the files:
+```
+wget https://raw.githubusercontent.com/kytrnd/twitter-image-reply-bot/master/image-reply-bot/img_reply_bot.py
+wget https://raw.githubusercontent.com/kytrnd/twitter-image-reply-bot/master/image-reply-bot/setup.py
+```
 
 ### Prerequisites
 
