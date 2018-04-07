@@ -8,7 +8,7 @@ This script obtains user mentions via Twython, a Python wrapper for the Twitter 
   1.a. You can use your own personal account, but I believe it's best to use one solely for this project.
 2. Create a Twitter application
   2.a. For more info visit: https://dototot.com/how-to-write-a-twitter-bot-with-python-and-tweepy/
-3. [Create your Custom Search Engine with Google](For more info visit: https://developers.google.com/custom-search/docs/tutorial/creatingcse)
+3. [Create your Custom Search Engine with Google](https://developers.google.com/custom-search/docs/tutorial/creatingcse)
 4. This project was developed using Ubuntu for Windows 10, I assume it can be easily recreated for Unix distros and OSX with minor tweaking.
 
 ### Prerequisites
