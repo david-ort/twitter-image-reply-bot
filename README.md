@@ -11,6 +11,8 @@ This script obtains user mentions via Twython, a Python wrapper for the Twitter 
 5. Download the raw files using ```wget```:
 ```
 wget https://raw.githubusercontent.com/kytrnd/twitter-image-reply-bot/master/image-reply-bot/img_reply_bot.py
+```
+```
 wget https://raw.githubusercontent.com/kytrnd/twitter-image-reply-bot/master/image-reply-bot/setup.py
 ```
 6. Install Python3:
@@ -36,6 +38,7 @@ Execute using Python 3:
 ```
 python3 img_reply_bot.py
 ```
+
 
 ## Built With
 * [Python (3.5.2)](https://docs.python.org/3/)
