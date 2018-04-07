@@ -52,4 +52,4 @@ python3 img_reply_bot.1.0.0.py
 * [search_google](https://rrwen.github.io/search_google/) - Python module for Google Custom Search API
 
 ### Contact Info
-david.ortiz11@upr.edu
+* david.ortiz11@upr.edu
