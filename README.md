@@ -1,6 +1,6 @@
 # Twitter Image Reply Bot
 
-This script obtains user mentions via Twython, a Python wrapper for the Twitter API and replies with 4 query-based png images obtained through the search_google, a module for Google API image search.
+This script obtains user mentions from Twitter via Twython, a Python wrapper for the Twitter API and replies with 4 query-based png images obtained through the search_google, a module for Google API image search.
 
 ## Getting Started
 
@@ -35,17 +35,17 @@ pip3 install search_google
 * Developer Key
 * CX
 
-## Running the script
+9. Change paths in ```reply_bot.py```:
+* ```dir_path = 'your_path'``` - images will be downloaded into this path.
+* ```files = glob.glob('your_path/*' + key + '.png')``` - images will be read from this path.
 
-After completing the previous steps, move the img_reply_bot.py file to your directory.
-Change some variables like directories and developer keys.
+## Running the script
 
 Execute using Python 3:
 
 ```
 python3 img_reply_bot.py
 ```
-
 
 ## Built With
 * [Python (3.5.2)](https://docs.python.org/3/)
