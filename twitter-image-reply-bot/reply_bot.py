@@ -4,7 +4,7 @@
 #  Description  : Replies to a Twitter user with a query-based png album.
 #  Version      : 1.0.0
 
-from auth import *
+from setup import *
 
 # id_generator(size,chars) : Creates an id to help differentiate images.
 #                          : The id consists of uppercase ascii caracters and digits.
