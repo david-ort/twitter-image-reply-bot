@@ -28,10 +28,12 @@ pip3 install twython
 pip3 install search_google
 ```
 8. Change authorization keys in ```setup.py```:
+###Twitter
 * Consumer Key
 * Consumer Secret
 * OAuth Access Token
 * OAuth Access Token Secret
+###Google Custom Search
 * Developer Key
 * CX
 
