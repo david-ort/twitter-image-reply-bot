@@ -1,6 +1,6 @@
 # Twitter Image Reply Bot
 
-Reply with a query-based album when bot is called. Twitter streaming and api calls are handled using Twython, image scrapping with Google Images Search
+Reply with a query-based album when bot is called. Twitter streaming and api calls are handled using Twython, image scrapping with Google Images Search.
 
 ## Getting Started
 
@@ -11,6 +11,7 @@ Reply with a query-based album when bot is called. Twitter streaming and api cal
 5. Clone repository:
 ```
 git clone https://github.com/david-SPLTJW/twitter-image-reply-bot.git
+cd twitter-image-reply-bot/twitter-image-reply-bot
 ```
 6. Install Python3, Twython and Google Images Search:
 ```
@@ -36,9 +37,9 @@ pip3 install Google-Images-Search
 ## Running the script
 Execute using Python 3:
 ```
-python3 img_reply_bot.py
+python3 twitter-image-reply-bot.py
 ```
-### Exit by pressing enter
+*Exit by pressing enter
 
 ## Built With
 * [Python (3.7.4)](https://docs.python.org/3/)
