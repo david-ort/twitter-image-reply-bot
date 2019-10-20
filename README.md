@@ -24,15 +24,22 @@ pip3 install twython
 pip3 install Google-Images-Search
 ```
 7. Set handle and authorization keys in ```setup.py```:
-### Twitter
-* Filter handle
-* Consumer Key
-* Consumer Secret
-* OAuth Access Token
-* OAuth Access Token Secret
-### Google Images Search
-* CX
-* API Key
+### Filter handle
+```
+handle = ""
+```
+# Twitter API keys
+```
+api_key = ""
+api_secret = ""
+oauth_token = ""
+oauth_token_secret = ""
+```
+### Google Custom Search API keys
+```
+cx = ""
+google_api_key = ""
+```
 
 ## Running the script
 Execute using Python 3:
