@@ -39,7 +39,7 @@ Execute using Python 3:
 ```
 python3 twitter-image-reply-bot.py
 ```
-*Exit by pressing enter
+Exit by pressing enter
 
 ## Built With
 * [Python (3.7.4)](https://docs.python.org/3/)
