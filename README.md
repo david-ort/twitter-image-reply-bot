@@ -10,7 +10,7 @@ Reply with a query-based album when bot is called. Twitter streaming and api cal
 4. Visit [cse](https://cse.google.com/cse/all) and enable "Image search" option and on the "Sites to search" option select "Search the entire web but emphasize included sites".
 5. Clone repository:
 ```
-git clone https://github.com/david-SPLTJW/twitter-image-reply-bot.git
+git clone https://github.com/david-ort/twitter-image-reply-bot.git
 cd twitter-image-reply-bot/twitter-image-reply-bot
 ```
 6. Install Python3, Twython and Google Images Search:
