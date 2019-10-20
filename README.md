@@ -2,8 +2,6 @@
 
 Reply with a query-based album when bot is called.
 
-This script obtains user mentions from Twitter via Twython, a Python wrapper for the Twitter API and replies with 4 query-based png images obtained through the search_google, a module for Google API image search.
-
 ## Getting Started
 
 1. [Create a Twitter account](https://twitter.com/i/flow/signup)
