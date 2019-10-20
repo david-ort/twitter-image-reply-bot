@@ -28,7 +28,7 @@ pip3 install Google-Images-Search
 ```
 handle = ""
 ```
-# Twitter API keys
+### Twitter API keys
 ```
 api_key = ""
 api_secret = ""
