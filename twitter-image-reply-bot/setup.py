@@ -1,33 +1,33 @@
-#  Author       : David J. Ortiz Rivera / kytrnd / STILLinBL00M
-#  Project      : Twitter Image Reply BOT
-#  File         : setup.py
-#  Description  : Imports all modules and initializes Twitter handle, API keys, and logger.
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-import json,string,random,glob,search_google.api,shutil,requests,logging
+# Import modules
+import google_images_search,logging,os
+from threading import Thread
 from twython import Twython,TwythonStreamer
-from time import gmtime,strftime
-from os import makedirs,path
 
-#  Twitter handle and API keys
+# twitter handle
+handle = "img_reply_bot"    # doesn't require "@"
+# twitter API keys
+api_key = "GTW8xPtwWBqo8LrLXNgfmb8tC"
+api_secret = "5WaLwGmnSgLTVjnVSwrUuJC6qvy8q2MPskCxoFaJFvDbuUgGn8"
+oauth_token = "938172754691584001-lBqCACvL4bFLnnLqcFRWcUBTBwuuHV4"
+oauth_token_secret = "PH0NVLYUYmh8AscMGsbq5p4rVRWXZ0KiZbbeL31c0NEUt"
 
-handle = 'your_handle' # Does not require '@'
-app_key = 'your_app_key'
-app_secret = 'your_app_secret'
-oauth_token = 'your_oath_token'
-oauth_token_secret = 'your_oauth_token_secret'
+# google custom search API keys
+cx = "003155942714465478666:a3phhqg2xgo"
+google_api_key = "AIzaSyDvpeEfdyZZIFqgEQ2Gmw5q5LkJN54CnBQ"
 
-#  Google Custom Search API keys
-
-developerKey = 'your_developerKey'
-cx = 'your_cx'
-
-#  Logger setup
-
-logging.basicConfig(level=logging.INFO,format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',datefmt='%d-%m-%y %H:%M:%S',filename='./bot.log',filemode='w')
+# logger format
+date_fmt = "%Y-%m-%d %H:%M:%S"
+fmt = "%(asctime)s: %(name)s %(message)s"
+# configure logger
+logging.basicConfig(level=logging.INFO,format=fmt,datefmt=date_fmt,filename="bot.log",filemode="a")
+# set image and stream loggers
+image_log = logging.getLogger("(image)")
+stream_log = logging.getLogger("(stream)")
+# set console logger
 console = logging.StreamHandler()
-console.setLevel(logging.INFO)
-formatter = logging.Formatter('%(name)-12s: %(levelname)-8s %(message)s')
-console.setFormatter(formatter)
-logging.getLogger('').addHandler(console)
-streamer = logging.getLogger('Streamer')
-search = logging.getLogger('img_search')
+console.setFormatter(logging.Formatter(fmt,date_fmt))
+logging.getLogger("").addHandler(console)
+
