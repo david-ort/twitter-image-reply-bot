@@ -1,58 +1,51 @@
 # Twitter Image Reply Bot
 
+Reply with a query-based album when bot is called.
+
 This script obtains user mentions from Twitter via Twython, a Python wrapper for the Twitter API and replies with 4 query-based png images obtained through the search_google, a module for Google API image search.
 
 ## Getting Started
 
-1. [Create a Twitter account](https://www.google.com.pr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=13&cad=rja&uact=8&ved=0ahUKEwiTtKCX-afaAhUMq1kKHbdJCfIQFghhMAw&url=https%3A%2F%2Ftwitter.com%2Fsignup%3Flang%3Den&usg=AOvVaw1MfJ_wTmLtjRlnLzZ8bNkM)
-2. [Create a Twitter application](http://docs.inboundnow.com/guide/create-twitter-application/)
-3. [Create your Custom Search Engine with Google](https://developers.google.com/custom-search/docs/tutorial/creatingcse)
-4. Create a directory in your system and move to it
-5. Download the raw files using ```wget```:
+1. [Create a Twitter account](https://twitter.com/i/flow/signup)
+2. [Create a Twitter application](https://developer.twitter.com/en/account/get-started)
+3. [Create a Google Custom Search Engine](https://developers.google.com/custom-search/docs/tutorial/creatingcse)
+4. Visit [cse](https://cse.google.com/cse/all) and enable "Image search" option and on the "Sites to search" option select "Search the entire web but emphasize included sites".
+5. Clone repository:
 ```
-wget https://raw.githubusercontent.com/kytrnd/twitter-image-reply-bot/master/image-reply-bot/img_reply_bot.py
+git clone https://github.com/david-SPLTJW/twitter-image-reply-bot.git
 ```
-```
-wget https://raw.githubusercontent.com/kytrnd/twitter-image-reply-bot/master/image-reply-bot/setup.py
-```
-6. Install Python3:
+6. Install Python3, Twython and Google-Images-Search:
 ```
 sudo apt-get install python3
 ```
-7. Install Twython and search_google using ```pip3```:
-
 ```
 pip3 install twython
 ```
 ```
-pip3 install search_google
+pip3 install Google-Images-Search
 ```
-8. Change authorization keys in ```setup.py```:
+7. Set handle and authorization keys in ```setup.py```:
 ### Twitter
+* Filter handle
 * Consumer Key
 * Consumer Secret
 * OAuth Access Token
 * OAuth Access Token Secret
-### Google Custom Search
-* Developer Key
+### Google Images Search
 * CX
-
-9. Change paths in ```reply_bot.py```:
-* ```dir_path = 'your_path'``` - images will be downloaded into this path.
-* ```files = glob.glob('your_path/*' + key + '.png')``` - images will be read from this path.
+* API Key
 
 ## Running the script
-
 Execute using Python 3:
-
 ```
 python3 img_reply_bot.py
 ```
+### Exit by pressing enter
 
 ## Built With
-* [Python (3.5.2)](https://docs.python.org/3/)
-* [Twython (3.6.0)](https://twython.readthedocs.io/en/latest/index.html)
-* [search_google (1.2.0)](https://rrwen.github.io/search_google/)
+* [Python (3.7.4)](https://docs.python.org/3/)
+* [Twython (3.7.0)](https://twython.readthedocs.io/en/latest/)
+* [Google-Images-Search (1.0.1)](https://pypi.org/project/Google-Images-Search/)
 
 ### Contact Info
 * david.ortiz11@upr.edu
